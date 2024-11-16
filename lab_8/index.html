@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Order Placement</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+
+  <body>
+    <h2>Order Placement</h2>
+    <form id="order-form">
+      <label for="order-number">Order Number:</label>
+      <input type="text" id="order-number" name="order_number" required />
+
+      <br /><br />
+
+      <label for="order-weight">Order Weight (kg):</label>
+      <input
+        type="number"
+        id="order-weight"
+        name="order_weight"
+        required
+        min="0.1"
+        step="0.1"
+      />
+
+      <br /><br />
+
+      <label for="city">Delivery City:</label>
+      <select id="city" name="city" required></select>
+
+      <br /><br />
+
+      <label for="delivery-type">Delivery Type:</label>
+      <select id="delivery-type" name="delivery_type" required>
+        <option value="warehouse">Warehouse</option>
+        <option value="postomat">Postomat</option>
+      </select>
+
+      <br /><br />
+
+      <label for="delivery_point">Choose Warehouse or Postomat:</label>
+      <select id="delivery_point" name="delivery_point" required></select>
+
+      <br /><br />
+
+      <button type="button" id="submit-order">Save Order</button>
+    </form>
+
+    <br /><br />
+    <div id="response-message"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
